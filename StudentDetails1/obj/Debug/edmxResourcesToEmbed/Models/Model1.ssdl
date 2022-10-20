@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StudentDetailsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblStudentInfo">
+    <Key>
+      <PropertyRef Name="Student Id" />
+    </Key>
+    <Property Name="Student Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Student Name" Type="varchar" MaxLength="50" />
+    <Property Name="Student Mobile" Type="varchar" MaxLength="50" />
+    <Property Name="Student Address" Type="varchar" MaxLength="50" />
+    <Property Name="Student Dept" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="StudentDetailsModelStoreContainer">
+    <EntitySet Name="tblStudentInfo" EntityType="Self.tblStudentInfo" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
